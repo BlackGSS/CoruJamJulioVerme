@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class RoundSystem : MonoBehaviour
 
 	private int _currentRound;
 
+	public Action RoundsCompleted;
+
 	void Start()
 	{
 		_currentRound = 0;
@@ -23,30 +26,28 @@ public class RoundSystem : MonoBehaviour
 	public void LoadRounds(List<RoundScriptable> rounds)
 	{
 		_rounds = rounds;
-		LoadRound(0);
+		LoadRound(0, true);
 	}
 
-	private void LoadRound(int round)
+	private void LoadRound(int round, bool successfull)
 	{
-		_dialogueUI.UpdateDialogueText(_rounds[round].BossAnswer);
+		_dialogueUI.UpdateDialogueText(successfull ? _rounds[round].BossGoodAnswer : _rounds[round].BossBadAnswer);
 		_dialogueUI.UpdateButtonsText(_rounds[round].AnswerTexts);
 	}
 
 	private void CheckStatus(int choice)
 	{
+		bool roundSuccessfull = _rounds[_currentRound].AnswerCheck[choice];
+		_statusBar.AddAmount(roundSuccessfull ? 1 : -1);
+
 		_currentRound++;
-
-		bool result = _rounds[_currentRound].AnswerCheck[choice];
-
-		_statusBar.AddAmount(result ? 1 : -1);
-
-		if (_currentRound < _rounds.Count)
+		if (_currentRound <= _rounds.Count - 1)
 		{
-			LoadRound(_currentRound);
+			LoadRound(_currentRound, roundSuccessfull);
 		}
 		else
 		{
-			//CheckWin
+			RoundsCompleted?.Invoke();
 		}
 	}
 }

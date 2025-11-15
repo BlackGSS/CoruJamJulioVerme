@@ -19,11 +19,12 @@ public class DialogueUI : MonoBehaviour
     public Action OnButtonAClicked;
     public Action OnButtonBClicked;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         buttonAText = buttonA.GetComponentInChildren<TextMeshProUGUI>();
-        buttonBText = buttonA.GetComponentInChildren<TextMeshProUGUI>();
+        buttonBText = buttonB.GetComponentInChildren<TextMeshProUGUI>();
+        buttonA.onClick.AddListener(OnButtonAClick);
+        buttonB.onClick.AddListener(OnButtonBClick);
     }
 
     public void OnButtonAClick()

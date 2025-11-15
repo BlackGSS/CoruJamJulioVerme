@@ -20,7 +20,7 @@ public class StatusBarUI : MonoBehaviour
 
     public void AddAmount(int amount)
     {
-        _statusBar.value -= amount;
+        _statusBar.value += amount;
     }
 
     public void SetBossName(string name)

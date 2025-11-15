@@ -6,7 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RoundData")]
 public class RoundScriptable : ScriptableObject
 {
-    public string BossAnswer;
+    public string BossGoodAnswer;
+    public string BossBadAnswer;
     [SerializeField]
     public List<string> AnswerTexts = new List<string>() { "", "" };
     [SerializeField]

@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: HormigaBoss
   m_EditorClassIdentifier: 
   BossName: Las Trillitex
+  BossImage: {fileID: 21300000, guid: 05d7d2d2a90b34b4298d941fdad6331a, type: 3}
   Rounds:
   - {fileID: 11400000, guid: bae81358381250242bc46ca56fbb8c10, type: 2}
   - {fileID: 11400000, guid: d91ba184fb9ead84aa6d95df5c0720cd, type: 2}
   - {fileID: 11400000, guid: 9c85d430be8a580448568aceed3209e4, type: 2}
+  InitialText:
+  - Texto 1
+  - Texto 2
+  - Texto 3
+  SuccessfullCombatText: Ganaste!
+  BadCombatText: Perdiste
+  FinalTexts: []

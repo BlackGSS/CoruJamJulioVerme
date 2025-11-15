@@ -1,56 +1,70 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
-    [SerializeField]
-    private TextMeshProUGUI dialogueText;
-    [SerializeField]
-    private Button buttonA;
-    [SerializeField]
-    private Button buttonB;
+	[SerializeField]
+	private TextMeshProUGUI dialogueText;
 
-    private TextMeshProUGUI buttonAText;
-    private TextMeshProUGUI buttonBText;
+	[SerializeField]
+	private List<string> loadedTexts;
 
-    public Action OnButtonAClicked;
-    public Action OnButtonBClicked;
+	[SerializeField]
+	private bool autoInitialize = false;
 
-    void Awake()
-    {
-        buttonAText = buttonA.GetComponentInChildren<TextMeshProUGUI>();
-        buttonBText = buttonB.GetComponentInChildren<TextMeshProUGUI>();
-        buttonA.onClick.AddListener(OnButtonAClick);
-        buttonB.onClick.AddListener(OnButtonBClick);
-    }
+	[SerializeField]
+	private UnityEvent unityEventOnCompletedText;
 
-    public void OnButtonAClick()
-    {
-        OnButtonAClicked?.Invoke();
-    }
+	public Action onCompleteTexts;
 
-    public void OnButtonBClick()
-    {
-        OnButtonBClicked?.Invoke();
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
+		if (autoInitialize)
+		{
+			if (loadedTexts.Count > 0)
+			{
+				ShowDialogue(loadedTexts);
+			}
+		}
+		else
+		{
+			dialogueText.gameObject.SetActive(false);
+		}
+	}
 
-    public void UpdateDialogueText(string text)
-    {
-        dialogueText.text = text;
-    }
+	public void ShowDialogue(List<string> textsToShow)
+	{
+		loadedTexts = new List<string>(textsToShow);
+		dialogueText.text = loadedTexts[0];
+		dialogueText.gameObject.SetActive(true);
+		StartCoroutine(ShowTexts());
+	}
 
-    public void UpdateButtonsText(List<string> buttonTexts)
-    {
-        buttonAText.text = buttonTexts[0];
-        buttonBText.text = buttonTexts[1];
-    }
+	public void NextDialogue()
+	{
+		loadedTexts.RemoveAt(0);
+		if (loadedTexts.Count > 0)
+		{
+			dialogueText.text = loadedTexts[0];
+		}
+	}
 
-    public void ShowChoiceButtons(bool active)
-    {
-        buttonA.gameObject.SetActive(active);
-        buttonB.gameObject.SetActive(active);
-    }
+	IEnumerator ShowTexts()
+	{
+		while (loadedTexts.Count > 0)
+		{
+			yield return null;
+		}
+
+		onCompleteTexts?.Invoke();
+		unityEventOnCompletedText?.Invoke();
+
+		yield return null;
+	}
 }

@@ -35,9 +35,9 @@ public class ClickerController : MonoBehaviour
     {
         fadeAmmount -= (1f / rocksNumber);
         CalculateFadeColor();
-        //background.color = Color.black;
-        background.DOColor(fadeColor, .5f);
-    }
+		//background.color = Color.black;
+		background.DOColor(fadeColor, .5f);
+	}
 
     protected void ShowBoss()
     {

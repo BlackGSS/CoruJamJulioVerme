@@ -8,7 +8,7 @@ public class RoundSystem : MonoBehaviour
 	[SerializeField]
 	private List<RoundScriptable> _rounds;
 	[SerializeField]
-	private DialogueUI _dialogueUI;
+	private ChoiceDialogueUI _dialogueUI;
 	[SerializeField]
 	private StatusBarUI _statusBar;
 

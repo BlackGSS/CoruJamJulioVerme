@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private BossScriptable _bossScriptable;
+    private RoundSystem _roundSystem;
+
+    private StatusBarUI _statusBar;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _statusBar.SetBossName(_bossScriptable.BossName);
+        _roundSystem.LoadRounds(_bossScriptable.Rounds);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckWin()
     {
-        
+        if (_statusBar.GetSliderValue > 0)
+        {
+            //Win
+        }
+        else
+        {
+            //Loose
+        }
     }
 }

@@ -11,12 +11,4 @@ public class RoundScriptable : ScriptableObject
     public List<string> AnswerTexts = new List<string>() { "", "" };
     [SerializeField]
     public List<bool> AnswerCheck = new List<bool>() { false, false };
-    [SerializeField]
-    public List<Data> Answers;
-}
-
-public struct Data
-{
-    public bool tehe;
-    public bool tu;
 }

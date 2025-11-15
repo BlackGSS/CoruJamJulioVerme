@@ -18,6 +18,8 @@ public class RocksController : MonoBehaviour
     protected GridLayoutGroup group;
     protected List<RockBehaviour> rocks;
 
+    #region Monobehaviour Methods
+
     protected virtual void Awake()
     {
         group = GetComponent<GridLayoutGroup>();
@@ -28,6 +30,19 @@ public class RocksController : MonoBehaviour
     {
         SetupRocks();
     }
+
+    #endregion
+
+    #region Public Methods
+
+    public int GetRocksNumber()
+    {
+        return rocks.Count;
+    }
+
+    #endregion
+
+    #region protected Methods
 
     protected void SetupRocks()
     {
@@ -43,8 +58,18 @@ public class RocksController : MonoBehaviour
         }
     }
 
+    protected void BreakRock(RockBehaviour rock)
+    {
+        //TODO Hacer algo más?
+        OnBreakRock?.Invoke();
+    }
+
     protected void Addlisteners()
     {
-
+        foreach(var rock in rocks)
+        {
+            rock.OnBreakRock += BreakRock;
+        }
     }
+    #endregion
 }

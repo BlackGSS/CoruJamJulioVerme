@@ -2,6 +2,7 @@
 // Author: Kadrius
 // ===================================================
 
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ public class RocksController : MonoBehaviour
     protected GridLayoutGroup group;
     protected List<RockBehaviour> rocks;
 
+    #region Monobehaviour Methods
+
     protected virtual void Awake()
     {
         group = GetComponent<GridLayoutGroup>();
@@ -27,24 +30,51 @@ public class RocksController : MonoBehaviour
     protected void Start()
     {
         SetupRocks();
+        DOVirtual.DelayedCall(.5f,() => group.enabled = false);
     }
+
+    #endregion
+
+    #region Public Methods
+
+    public int GetRocksNumber()
+    {
+        return rocks.Count;
+    }
+
+    #endregion
+
+    #region protected Methods
 
     protected void SetupRocks()
     {
         RandomizeRotation();
+        Addlisteners();
     }
 
     protected void RandomizeRotation()
     {
         foreach (var rock in rocks)
         {
-            Quaternion rotation = Random.rotation;
-            rock.transform.localRotation = rotation;
+            float rotation = Random.Range(0f, 360f);
+            Vector3 euler = rock.transform.localRotation.eulerAngles;
+            euler.z = rotation;
+            rock.transform.localRotation = Quaternion.Euler(euler);
         }
+    }
+
+    protected void BreakRock(RockBehaviour rock)
+    {
+        //TODO Hacer algo más?
+        OnBreakRock?.Invoke();
     }
 
     protected void Addlisteners()
     {
-
+        foreach(var rock in rocks)
+        {
+            rock.OnBreakRock += BreakRock;
+        }
     }
+    #endregion
 }

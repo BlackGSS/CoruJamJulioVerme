@@ -9,4 +9,5 @@ using UnityEngine;
 public static class Player
 {
     public static float diggingStrength = 1f;
+    public static int combatRound = 0;
 }

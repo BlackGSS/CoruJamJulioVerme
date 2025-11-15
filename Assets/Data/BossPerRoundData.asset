@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea71625212f547243af006a7fecfba7b, type: 3}
+  m_Name: BossPerRoundData
+  m_EditorClassIdentifier: 
+  BossPerRound:
+  - {fileID: 11400000, guid: aa4b7934fd1ddce47825cec645067c26, type: 2}
+  - {fileID: 0}

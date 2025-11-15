@@ -13,6 +13,8 @@ public class ClickerController : MonoBehaviour
     [SerializeField]
     protected Image background;
     [SerializeField]
+    protected Image boss;
+    [SerializeField]
     protected RocksController rocksController;
 
     protected int rocksNumber;
@@ -35,8 +37,8 @@ public class ClickerController : MonoBehaviour
     {
         fadeAmmount -= (1f / rocksNumber);
         CalculateFadeColor();
-        //background.color = Color.black;
         background.DOColor(fadeColor, .5f);
+        boss.DOColor(fadeColor, .5f);
     }
 
     protected void ShowBoss()

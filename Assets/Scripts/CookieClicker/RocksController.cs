@@ -15,6 +15,7 @@ public class RocksController : MonoBehaviour
 {
     public Action OnBreakRock;
     public Action OnBreakAllRocks;
+    public List<Sprite> rockSprites = new List<Sprite>();
 
     protected GridLayoutGroup group;
     protected List<RockBehaviour> rocks;
@@ -49,6 +50,7 @@ public class RocksController : MonoBehaviour
     protected void SetupRocks()
     {
         RandomizeRotation();
+        RandomizeAspect();
         Addlisteners();
     }
 
@@ -60,6 +62,15 @@ public class RocksController : MonoBehaviour
             Vector3 euler = rock.transform.localRotation.eulerAngles;
             euler.z = rotation;
             rock.transform.localRotation = Quaternion.Euler(euler);
+        }
+    }
+
+    protected void RandomizeAspect()
+    {
+        foreach (var rock in rocks)
+        {
+            rock.ChangeImage(rockSprites[Random.Range(0,rockSprites.Count)]);
+            rock.SetOrder(Random.Range(1,rockSprites.Count));
         }
     }
 

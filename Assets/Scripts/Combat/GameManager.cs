@@ -5,23 +5,29 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private BossScriptable _bossScriptable;
+    private BossPerRoundScriptable _bossPerRoundScriptable;
     [SerializeField]
     private RoundSystem _roundSystem;
     [SerializeField]
     private StatusBarUI _statusBar;
+    [SerializeField]
+    private DialogueUI _dialogueUI;
 
-    // Start is called before the first frame update
     void Start()
     {
-        _statusBar.SetBossName(_bossScriptable.BossName);
+        BossScriptable bossScriptable = _bossPerRoundScriptable.BossPerRound[Player.combatRound];
 
-        _roundSystem.LoadRounds(_bossScriptable.Rounds);
+        _statusBar.SetBossName(bossScriptable.BossName);
+
+        _dialogueUI.ShowChoiceButtons(true);
+        _roundSystem.LoadRounds(bossScriptable.Rounds);
         _roundSystem.RoundsCompleted += CheckWin;
     }
 
     public void CheckWin()
     {
+        _dialogueUI.ShowChoiceButtons(false);
+        Player.combatRound++;
         if (_statusBar.GetSliderValue > 0)
         {
             //Win

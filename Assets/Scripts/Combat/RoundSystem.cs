@@ -47,7 +47,13 @@ public class RoundSystem : MonoBehaviour
 		}
 		else
 		{
-			RoundsCompleted?.Invoke();
+			StartCoroutine(CompleteRounds());
 		}
+	}
+
+	IEnumerator CompleteRounds()
+	{
+		yield return new WaitForEndOfFrame();
+		RoundsCompleted?.Invoke();
 	}
 }

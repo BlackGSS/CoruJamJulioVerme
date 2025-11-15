@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea71625212f547243af006a7fecfba7b, type: 3}
   m_Name: BossPerRoundData
   m_EditorClassIdentifier: 
-  BossPerRound: {fileID: 0}
+  BossPerRound:
+  - {fileID: 11400000, guid: aa4b7934fd1ddce47825cec645067c26, type: 2}
+  - {fileID: 0}

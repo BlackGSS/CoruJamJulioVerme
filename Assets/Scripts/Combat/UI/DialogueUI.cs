@@ -47,4 +47,10 @@ public class DialogueUI : MonoBehaviour
         buttonAText.text = buttonTexts[0];
         buttonBText.text = buttonTexts[1];
     }
+
+    public void ShowChoiceButtons(bool active)
+    {
+        buttonA.gameObject.SetActive(active);
+        buttonB.gameObject.SetActive(active);
+    }
 }

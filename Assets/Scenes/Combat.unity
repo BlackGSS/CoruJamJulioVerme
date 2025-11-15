@@ -2056,9 +2056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844266f2482bd724da0cc52d805c8b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossScriptable: {fileID: 11400000, guid: aa4b7934fd1ddce47825cec645067c26, type: 2}
+  _bossPerRoundScriptable: {fileID: 11400000, guid: 2d251eb3d481131479af9907166f3031, type: 2}
   _roundSystem: {fileID: 487040537}
   _statusBar: {fileID: 1661147498}
+  _dialogueUI: {fileID: 394091125}
 --- !u!1 &1754615737
 GameObject:
   m_ObjectHideFlags: 0

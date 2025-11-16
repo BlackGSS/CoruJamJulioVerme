@@ -60,14 +60,17 @@ public class ClickerController : MonoBehaviour
         clickTutorial.SetActive(false);
         fadeAmmount -= CalculateFadeAmmount();
         CalculateFadeColor();
-        background.DOColor(fadeColor, .5f);
-        bossImage.DOColor(fadeColor, .5f);
+        background.DOColor(fadeColor, .0f);
+        bossImage.DOColor(fadeColor, .0f);
     }
 
     protected void ShowBoss()
     {
         //Do some animation and emit some sound
         //and fade to black to next scene
+
+        background.DOColor(Color.white, .5f);
+        bossImage.DOColor(Color.white, .5f);
         combatTransitionMusic.Play();
         animationPokemonTransition.SetActive(true);
 
@@ -80,7 +83,7 @@ public class ClickerController : MonoBehaviour
 
     protected float CalculateFadeAmmount()
     {
-        return (1f / rocksNumber);
+        return (0.4f / rocksNumber);
     }
 
     protected void CalculateFadeColor()

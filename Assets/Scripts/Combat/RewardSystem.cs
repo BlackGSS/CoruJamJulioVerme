@@ -18,9 +18,10 @@ public class RewardSystem : MonoBehaviour
 
 	public void WinNextReward()
 	{
-		Player.diggingStrength += 5f;
+		Player.diggingStrength += 2f;
 		Accesories accesory = (Accesories)Player.Accesories.Count;
 		AccesoriesScriptable accesoryData = _accesoriesData.First(x => x.accesory == accesory);
+		Player.Accesories.Add(accesory);
 
 		_rewardUI.gameObject.SetActive(true);
 		_rewardUI.ShowReward(accesoryData);

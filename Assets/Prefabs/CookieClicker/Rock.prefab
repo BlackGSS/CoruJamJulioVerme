@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f8928e9ddbe1b44a07350aa01c972b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 10
+  life: 5
   rockParticles: {fileID: 8632267785053984242, guid: c3d681335366b56488818a188c5f4972, type: 3}
 --- !u!222 &1865882193357962470
 CanvasRenderer:

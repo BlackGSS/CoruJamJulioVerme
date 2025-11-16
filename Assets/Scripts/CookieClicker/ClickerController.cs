@@ -70,7 +70,7 @@ public class ClickerController : MonoBehaviour
         DOVirtual.DelayedCall(2f, () => 
         {
             combatTransitionMusic.DOFade(0f, 2f);
-            sceneManagement.NextScene(nextSceneName);
+            sceneManagement.NextScene();
         });
     }
 

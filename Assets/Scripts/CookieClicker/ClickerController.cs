@@ -25,7 +25,9 @@ public class ClickerController : MonoBehaviour
     [SerializeField]
     protected SceneManagement sceneManagement;
     [SerializeField]
-    protected string nextSceneName;
+    protected string nextSceneName = "Combat";
+    [SerializeField]
+    protected AudioSource combatTransitionMusic;
 
     protected int rocksNumber;
     protected int rockIndex = 1;
@@ -63,7 +65,13 @@ public class ClickerController : MonoBehaviour
     {
         //Do some animation and emit some sound
         //and fade to black to next scene
-        DOVirtual.DelayedCall(2f, () => sceneManagement.NextScene(nextSceneName));
+        combatTransitionMusic.Play();
+        
+        DOVirtual.DelayedCall(2f, () => 
+        {
+            combatTransitionMusic.DOFade(0f, 2f);
+            sceneManagement.NextScene(nextSceneName);
+        });
     }
 
     protected float CalculateFadeAmmount()

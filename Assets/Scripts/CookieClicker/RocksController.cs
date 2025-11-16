@@ -20,6 +20,7 @@ public class RocksController : MonoBehaviour
 
     protected GridLayoutGroup group;
     protected List<RockBehaviour> rocks;
+    protected int remainingRocks;
 
     #region Monobehaviour Methods
 
@@ -27,6 +28,7 @@ public class RocksController : MonoBehaviour
     {
         group = GetComponent<GridLayoutGroup>();
         rocks = group.GetComponentsInChildren<RockBehaviour>().ToList();
+        remainingRocks = rocks.Count;
     }
 
     protected void Start()
@@ -71,7 +73,7 @@ public class RocksController : MonoBehaviour
         int[] ints = new int[rocks.Count];
         for (int i = 0; i < rocks.Count; i++)
         {
-            ints[i] = i;
+            ints[i] = i+1;
         }
 
         int[] shufledInts = Shuffle(ints);
@@ -88,6 +90,9 @@ public class RocksController : MonoBehaviour
     {
         //TODO Hacer algo más?
         OnBreakRock?.Invoke();
+        remainingRocks--;
+        if (remainingRocks <= 0)
+            OnBreakAllRocks?.Invoke();
     }
 
     protected void Addlisteners()

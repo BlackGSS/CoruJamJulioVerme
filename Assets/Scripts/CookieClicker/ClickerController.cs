@@ -22,6 +22,10 @@ public class ClickerController : MonoBehaviour
     protected GameObject clickTutorial;
     [SerializeField]
     protected DialogueUI dialogueUI;
+    [SerializeField]
+    protected SceneManagement sceneManagement;
+    [SerializeField]
+    protected string nextSceneName;
 
     protected int rocksNumber;
     protected int rockIndex = 1;
@@ -59,14 +63,11 @@ public class ClickerController : MonoBehaviour
     {
         //Do some animation and emit some sound
         //and fade to black to next scene
+        DOVirtual.DelayedCall(2f, () => sceneManagement.NextScene(nextSceneName));
     }
 
     protected float CalculateFadeAmmount()
     {
-        //for(int i =0; i<rocksNumber; i++)
-        //{
-
-        //}
         return (1f / rocksNumber);
     }
 

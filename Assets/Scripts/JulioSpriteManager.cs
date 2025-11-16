@@ -29,7 +29,6 @@ public class JulioSpriteManager : MonoBehaviour
 			_julioImage.sprite = _julioSprites.narrativeSprites[Player.combatRound];
 
 			var accesoriesDictionary = _accesories.ToDictionary(x => x.accesory);
-			Player.Accesories = new List<Accesories>{ Accesories.Camisa, Accesories.Chaleco};
 			for (int i = 0; i < Player.Accesories.Count; i++)
 			{
 				Image newImage = Instantiate(_accesoriesImagePrefab, _accesoriesReferencePoint).GetComponent<Image>();
@@ -42,6 +41,7 @@ public class JulioSpriteManager : MonoBehaviour
 	{
 		_julioImage.sprite = _julioSprites.combatSprite;
 
+		Player.Accesories = new List<Accesories> { Accesories.Camisa};
 		var accesoriesDictionary = _accesories.ToDictionary(x => x.accesory);
 		for (int i = 0; i < Player.Accesories.Count; i++)
 		{

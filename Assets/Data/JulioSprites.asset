@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 694c8cc3af7c644998b1bf80a4f18386, type: 3}
   - {fileID: 21300000, guid: ccc32cb905ea44d8399038eb6e4a865c, type: 3}
   - {fileID: 21300000, guid: 635fd70c32eeb4222b1162fddf2c1d28, type: 3}
-  combatSprite: {fileID: 0}
+  combatSprite: {fileID: 21300000, guid: 92f37435215d5418593f66be42a71264, type: 3}

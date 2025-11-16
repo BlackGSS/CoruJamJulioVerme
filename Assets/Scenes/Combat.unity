@@ -1324,6 +1324,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957860955}
   m_CullTransparentMesh: 1
+--- !u!114 &985315171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3163327758251185452, guid: b65fb984cecc2a8448d93d8f5e237843, type: 3}
+  m_PrefabInstance: {fileID: 3163327758877811279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1816d7de7db3424b9b0b2711d103e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019056879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2160,7 @@ MonoBehaviour:
   _choiceDialogueUI: {fileID: 394091125}
   _dialogueUI: {fileID: 249486535}
   _bossImage: {fileID: 1019056881}
+  _julioSpriteManager: {fileID: 985315171}
 --- !u!1 &1754615737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,6 +2683,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1910035970}
+    - target: {fileID: 3163327759544140391, guid: b65fb984cecc2a8448d93d8f5e237843, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ccc32cb905ea44d8399038eb6e4a865c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b65fb984cecc2a8448d93d8f5e237843, type: 3}
 --- !u!1001 &4200322451694112493

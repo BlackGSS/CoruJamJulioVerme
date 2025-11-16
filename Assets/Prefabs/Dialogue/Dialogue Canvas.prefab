@@ -598,7 +598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 4200322450025598084}
-  loadedTexts: []
+  continueButton: {fileID: 4200322449986174217}
+  textsData: {fileID: 0}
   autoInitialize: 0
   unityEventOnCompletedText:
     m_PersistentCalls:

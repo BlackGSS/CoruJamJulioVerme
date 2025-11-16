@@ -10,9 +10,11 @@ public class DialogueUI : MonoBehaviour
 {
 	[SerializeField]
 	private TextMeshProUGUI dialogueText;
+	[SerializeField]
+	private Button continueButton;
 
 	[SerializeField]
-	private List<string> loadedTexts;
+	private TextScriptable textsData;
 
 	[SerializeField]
 	private bool autoInitialize = false;
@@ -20,16 +22,16 @@ public class DialogueUI : MonoBehaviour
 	[SerializeField]
 	private UnityEvent unityEventOnCompletedText;
 
+	private List<string> loadedTexts;
 	public Action onCompleteTexts;
 
-	// Start is called before the first frame update
 	void Start()
 	{
 		if (autoInitialize)
 		{
-			if (loadedTexts.Count > 0)
+			if (textsData != null)
 			{
-				ShowDialogue(loadedTexts);
+				ShowDialogue(textsData.textsToLoad);
 			}
 		}
 		else
@@ -40,6 +42,7 @@ public class DialogueUI : MonoBehaviour
 
 	public void ShowDialogue(List<string> textsToShow)
 	{
+		continueButton.gameObject.SetActive(true);
 		loadedTexts = new List<string>(textsToShow);
 		dialogueText.text = loadedTexts[0];
 		dialogueText.gameObject.SetActive(true);
@@ -64,6 +67,8 @@ public class DialogueUI : MonoBehaviour
 
 		onCompleteTexts?.Invoke();
 		unityEventOnCompletedText?.Invoke();
+
+		continueButton.gameObject.SetActive(false);
 
 		yield return null;
 	}

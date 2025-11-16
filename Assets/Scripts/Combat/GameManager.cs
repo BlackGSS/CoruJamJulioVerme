@@ -17,11 +17,14 @@ public class GameManager : MonoBehaviour
 	private DialogueUI _dialogueUI;
 	[SerializeField]
 	private Image _bossImage;
+	[SerializeField]
+	private JulioSpriteManager _julioSpriteManager;
 
 	void Start()
 	{
 		BossScriptable bossScriptable = _bossPerRoundScriptable.BossPerRound[Player.combatRound];
 		_dialogueUI.onCompleteTexts += InitializeCombat;
+		_julioSpriteManager.UpdateCombatSprites();
 
 		_statusBar.SetBossName(bossScriptable.BossName);
 		_bossImage.sprite = bossScriptable.BossImage;
@@ -64,8 +67,7 @@ public class GameManager : MonoBehaviour
 		Player.combatRound++;
 		_dialogueUI.gameObject.SetActive(false);
 		_dialogueUI.onCompleteTexts -= EndCombat;
-		//FadeOut y
-		//Cargar siguiente escena
+		//Cargar siguiente escena incluyendo fadeout
 	}
 
 	private void EarnReward()

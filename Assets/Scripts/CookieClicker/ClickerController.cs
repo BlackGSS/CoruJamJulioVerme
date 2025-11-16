@@ -28,11 +28,14 @@ public class ClickerController : MonoBehaviour
     protected string nextSceneName = "Combat";
     [SerializeField]
     protected AudioSource combatTransitionMusic;
+    [SerializeField]
+    protected GameObject animationPokemonTransition;
 
     protected int rocksNumber;
     protected int rockIndex = 1;
     protected float fadeAmmount = 1f;
     protected Color fadeColor = Color.black;
+
 
     protected void Start()
     {
@@ -66,7 +69,8 @@ public class ClickerController : MonoBehaviour
         //Do some animation and emit some sound
         //and fade to black to next scene
         combatTransitionMusic.Play();
-        
+        animationPokemonTransition.SetActive(true);
+
         DOVirtual.DelayedCall(2f, () => 
         {
             combatTransitionMusic.DOFade(0f, 2f);

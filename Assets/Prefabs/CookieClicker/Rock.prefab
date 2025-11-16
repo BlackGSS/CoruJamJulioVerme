@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+  rockParticles: {fileID: 8632267785053984242, guid: c3d681335366b56488818a188c5f4972, type: 3}
 --- !u!222 &1865882193357962470
 CanvasRenderer:
   m_ObjectHideFlags: 0

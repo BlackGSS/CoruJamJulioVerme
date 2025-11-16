@@ -15,6 +15,7 @@ public class RocksController : MonoBehaviour
 {
     public Action OnBreakRock;
     public Action OnBreakAllRocks;
+    public AudioSource audioSource;
     public List<Sprite> rockSprites = new List<Sprite>();
 
     protected GridLayoutGroup group;

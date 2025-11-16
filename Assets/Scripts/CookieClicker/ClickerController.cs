@@ -13,9 +13,11 @@ public class ClickerController : MonoBehaviour
     [SerializeField]
     protected Image background;
     [SerializeField]
-    protected Image boss;
+    protected Image bossImage;
     [SerializeField]
     protected RocksController rocksController;
+    [SerializeField]
+    protected List<BossScriptable> bossScriptables;
 
     protected int rocksNumber;
     protected float fadeAmmount = 1f;
@@ -24,6 +26,7 @@ public class ClickerController : MonoBehaviour
     protected void Start()
     {
         rocksNumber = rocksController.GetRocksNumber();
+        SetupBossData(Player.combatRound);
         Addlisteners();
     }
 
@@ -38,7 +41,7 @@ public class ClickerController : MonoBehaviour
         fadeAmmount -= (1f / rocksNumber);
         CalculateFadeColor();
         background.DOColor(fadeColor, .5f);
-        boss.DOColor(fadeColor, .5f);
+        bossImage.DOColor(fadeColor, .5f);
     }
 
     protected void ShowBoss()
@@ -51,5 +54,10 @@ public class ClickerController : MonoBehaviour
     {
         float colorValue = (1f - fadeAmmount);
         fadeColor = new Color(colorValue, colorValue, colorValue);
+    }
+
+    protected void SetupBossData(int round)
+    {
+        bossImage.sprite = bossScriptables[round].BossImage;
     }
 }

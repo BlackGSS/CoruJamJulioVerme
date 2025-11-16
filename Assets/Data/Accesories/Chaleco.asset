@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a3937f555edd04c865ef4e7ef04beb, type: 3}
   m_Name: Chaleco
   m_EditorClassIdentifier: 
-  accesory: 0
-  sprite: {fileID: 0}
+  accesory: 1
+  spriteFront: {fileID: 21300000, guid: c1c8af44d2e8442429e7ab94349dedb9, type: 3}
+  spriteBack: {fileID: 0}

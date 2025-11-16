@@ -4,5 +4,6 @@ using UnityEngine;
 public class AccesoriesScriptable : ScriptableObject
 {
 	public Accesories accesory;
-	public Sprite sprite;
+	public Sprite spriteFront;
+	public Sprite spriteBack;
 }

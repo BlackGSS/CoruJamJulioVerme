@@ -8,7 +8,5 @@ public class JulioSpritesScriptable : ScriptableObject
 	[SerializeField]
 	public Sprite[] narrativeSprites;
 	[SerializeField]
-	public Sprite[] combatSprites;
-	[SerializeField]
-	public Accesories[] accesoriesSprites;
+	public Sprite combatSprite;
 }

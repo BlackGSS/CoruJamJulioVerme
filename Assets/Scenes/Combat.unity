@@ -1685,6 +1685,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _julioImage: {fileID: 1741266984}
+  _accesoriesImagePrefab: {fileID: 0}
+  _accesoriesReferencePoint: {fileID: 0}
+  _julioSprites: {fileID: 11400000, guid: c0471a8cdbf6ebc409381f58bfd600d1, type: 2}
+  _accesories:
+  - {fileID: 11400000, guid: 7e55c0a6a0e9b3f4bb7da67be0877742, type: 2}
+  - {fileID: 11400000, guid: 856bd37bfe0921542a6ad8f2dec1759b, type: 2}
   isThisNarrativa: 0
 --- !u!1 &1019056879
 GameObject:

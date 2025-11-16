@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,15 +9,35 @@ public class JulioSpriteManager : MonoBehaviour
     private Image _julioImage;
 
     [SerializeField]
+    private Image _accesoriesImagePrefab;
+
+    [SerializeField]
+    private Transform _accesoriesReferencePoint;
+
+    [SerializeField]
+    private JulioSpritesScriptable _julioSprites;
+    [SerializeField]
+    private AccesoriesScriptable[] _accesories;
+
+    [SerializeField]
     private bool isThisNarrativa;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (isThisNarrativa)
         {
-            //GEstion de en base a cansancio y en base a si consiguio la camisa o no (pa mañana sino)
+            _julioImage.sprite = _julioSprites.narrativeSprites[Player.combatRound];
+            var accesoriesDictionary = _accesories.ToDictionary(x => x.accesory);
+			for (int i = 0; i < Player.Accesories.Count; i++)
+			{
+                Image newImage = Instantiate(_accesoriesImagePrefab);
+                newImage.sprite = accesoriesDictionary[Player.Accesories[i]].sprite;
+            }
         }
     }
-    
+
+    public void UpdateCombatSprites()
+    {
+        _julioImage.sprite = _julioSprites.combatSprites[Player.combatRound];
+    }
 }

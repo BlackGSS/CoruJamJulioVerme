@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accesory: 1
   spriteFront: {fileID: 21300000, guid: c1c8af44d2e8442429e7ab94349dedb9, type: 3}
-  spriteBack: {fileID: 0}
+  spriteBack: {fileID: 21300000, guid: 6cc5ab072a4f44bc585075e9e7574a41, type: 3}

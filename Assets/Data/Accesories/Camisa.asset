@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Camisa
   m_EditorClassIdentifier: 
   accesory: 0
-  sprite: {fileID: 0}
+  spriteFront: {fileID: 21300000, guid: 2aa73588383184200a67c8bbb53cb831, type: 3}
+  spriteBack: {fileID: 21300000, guid: aef0b8f44823a40609f3ef7e868f73ed, type: 3}

@@ -18,11 +18,13 @@ public class RockBehaviour : MonoBehaviour
     protected Button button;
     protected Canvas canvas;
     protected Tweener tween;
+    protected AudioSource audioSource;
 
     protected void Awake()
     {
         canvas = GetComponent<Canvas>();
         button = GetComponent<Button>();
+        audioSource = transform.parent.GetComponent<AudioSource>();
         button.onClick.AddListener(HitRock);
         tween = transform.DOShakePosition(.3f, new Vector3(10f, 10f, 0f), 40, 150).SetAutoKill(false).Pause();
         button.image.alphaHitTestMinimumThreshold = 0.1f;
@@ -40,12 +42,13 @@ public class RockBehaviour : MonoBehaviour
 
     protected void HitRock() 
     {
+        audioSource.Play();
         life -= Player.diggingStrength;
 
         GameObject particles = Instantiate(rockParticles, this.transform);
         particles.transform.localPosition = Vector3.zero;
         particles.transform.localRotation = Quaternion.identity;
-
+        
         if (!tween.IsPlaying())
         {
             tween.Kill();

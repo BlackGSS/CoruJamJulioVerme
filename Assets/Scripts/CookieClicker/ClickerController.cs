@@ -20,6 +20,7 @@ public class ClickerController : MonoBehaviour
     protected List<BossScriptable> bossScriptables;
 
     protected int rocksNumber;
+    protected int rockIndex = 1;
     protected float fadeAmmount = 1f;
     protected Color fadeColor = Color.black;
 
@@ -38,7 +39,7 @@ public class ClickerController : MonoBehaviour
 
     protected void ChangeBackgroundVisibility()
     {
-        fadeAmmount -= (1f / rocksNumber);
+        fadeAmmount -= CalculateFadeAmmount();
         CalculateFadeColor();
         background.DOColor(fadeColor, .5f);
         bossImage.DOColor(fadeColor, .5f);
@@ -48,6 +49,15 @@ public class ClickerController : MonoBehaviour
     {
         //Do some animation and emit some sound
         //and fade to black to next scene
+    }
+
+    protected float CalculateFadeAmmount()
+    {
+        //for(int i =0; i<rocksNumber; i++)
+        //{
+
+        //}
+        return (1f / rocksNumber);
     }
 
     protected void CalculateFadeColor()

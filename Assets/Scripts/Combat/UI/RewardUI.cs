@@ -15,6 +15,6 @@ public class RewardUI : MonoBehaviour
 	public void ShowReward(AccesoriesScriptable accesoryData)
 	{
 		accesoryImage.sprite = accesoryData.spriteFront;
-		dialogueText.text = $"¡Julio ha ganado un {accesoryData.accesory}! <br><br> Ahora se siente más seguro y excavará más rápido.";
+		dialogueText.text = $"¡Julio ha ganado une {accesoryData.accesory}!";
 	}
 }

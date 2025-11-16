@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TopoBoss
   m_EditorClassIdentifier: 
   BossName: Manolo Eltopo
-  BossImage: {fileID: 21300000, guid: 05d7d2d2a90b34b4298d941fdad6331a, type: 3}
+  BossImage: {fileID: 21300000, guid: 54bcbad315b314cc1964239c28588d31, type: 3}
   Rounds:
   - {fileID: 11400000, guid: bae81358381250242bc46ca56fbb8c10, type: 2}
   - {fileID: 11400000, guid: d91ba184fb9ead84aa6d95df5c0720cd, type: 2}

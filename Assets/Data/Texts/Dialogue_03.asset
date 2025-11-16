@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3676ec090e12fa5408e3ff933a5ffbb1, type: 3}
+  m_Name: Dialogue_03
+  m_EditorClassIdentifier: 
+  textsToLoad:
+  - 'Julio: Me encantaba esa casa.'
+  - '*Llora en pobre*'
+  - Resignado, Julio tuvo que seguir descendiendo por el subsuelo.
+  - La verdad es que ha tenido mucha suerte.
+  - "Los topos sienten debilidad por las lombrices de tierra, as\xED que, un aplauso
+    a Manolo por no comerse al gusano."
+  - "A menos que est\xE9 acechando para seguirlo y com\xE9rselo a \xE9l y a sus hijos\u2026"
+  - "Pero eso ya suceder\xE1 en pr\xF3ximos niveles."
+  - "Hasta aqu\xED llega nuestra versi\xF3n CoruJam de Julio Verme: viaje al centro
+    de la especulaci\xF3n."
+  - "Continuar\xE1\u2026 o no. Seguramente no, pero ya veremos."
+  - "Julio: \xBF\xBF\xBFQue el topo va a comer a qu\xE9???"
+  - FIN

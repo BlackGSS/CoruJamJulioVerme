@@ -12,8 +12,22 @@ public class SceneManagement : MonoBehaviour
 	[SerializeField]
 	private UnityEvent actionAfterFadeIn;
 
+	private List<string> sceneOrder;
+
 	private void Start()
 	{
+		sceneOrder = new List<string>()
+		{
+			"Main_menu",
+			"Dialogue_01",
+			"CookieClicker",
+			"Combat",
+			"Dialogue_02",
+			"CookieClicker",
+			"Combat",
+			"Dialogue_03"
+		};
+
 		fadeImage.alpha = 1f;
 		Sequence newSequence = DOTween.Sequence();
 		newSequence.Append(fadeImage.DOFade(0f, 2f));
@@ -24,26 +38,18 @@ public class SceneManagement : MonoBehaviour
 		});
 	}
 
-	public void NextScene(string sceneName = null)
+	public void NextScene()
 	{
 		fadeImage.gameObject.SetActive(true);
 		fadeImage.alpha = 0f;
 		Sequence newSequence = DOTween.Sequence();
 		newSequence.Append(fadeImage.DOFade(1f, 2f));
-		newSequence.OnComplete(() => LoadNextScene(sceneName));
+		newSequence.OnComplete(() => LoadNextScene());
 	}
 
-	private void LoadNextScene(string sceneName)
+	private void LoadNextScene()
 	{
-		if (sceneName != null && !string.IsNullOrEmpty(sceneName))
-		{
-			Player.currentScene = SceneManager.GetSceneByName(sceneName).buildIndex;
-		}
-		else
-		{
-			Player.currentScene++;
-		}
-
-		SceneManager.LoadScene(Player.currentScene);
+		Player.currentScene++;
+		SceneManager.LoadScene(sceneOrder[Player.currentScene]);
 	}
 }

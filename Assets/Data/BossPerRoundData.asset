@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BossPerRound:
   - {fileID: 11400000, guid: aa4b7934fd1ddce47825cec645067c26, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6778adde040124d5e9c018c30fc11a3b, type: 2}

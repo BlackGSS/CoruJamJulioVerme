@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round1
   m_EditorClassIdentifier: 
-  BossGoodAnswer: Hola buen gusano
-  BossBadAnswer: 
+  BossGoodAnswer: "Manolo: Con dos islas si quisiera. \xBFLe interesa?"
+  BossBadAnswer: "Manolo: Seguro que s\xED, pero el propietario no quiere ni\xF1es.
+    Igual es mejor que mire en otro sitio."
   AnswerTexts:
-  - Mala
-  - Buena
+  - "Vaya, es un sitio perfecto, aqu\xED caben sin problema mis 20 hijos."
+  - "Con tanto sitio, podr\xE9 poner una cocina con isla."
   AnswerCheck: 0001

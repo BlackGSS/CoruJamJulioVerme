@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round2
   m_EditorClassIdentifier: 
-  BossGoodAnswer: Perfecto
-  BossBadAnswer: Mal
+  BossGoodAnswer: "Trillitex: Vaya, pero si s\xF3lo es un stalker."
+  BossBadAnswer: "Trillitex: TE LO DIJE. Como te acerques m\xE1s, llamamos a la polic\xEDa."
   AnswerTexts:
-  - Buena
-  - Mala
+  - "No, no, que me he liado, estaba buscando casa pero no s\xE9 si quiero quedarme
+    aqu\xED..."
+  - "Necesito un lugar para quedarme. \xBFQu\xE9 tengo que hacer para vivir aqu\xED?"
   AnswerCheck: 0100

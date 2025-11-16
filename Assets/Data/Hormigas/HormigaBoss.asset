@@ -19,9 +19,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d91ba184fb9ead84aa6d95df5c0720cd, type: 2}
   - {fileID: 11400000, guid: 9c85d430be8a580448568aceed3209e4, type: 2}
   InitialText:
-  - Texto 1
-  - Texto 2
-  - Texto 3
-  SuccessfullCombatText: Ganaste!
-  BadCombatText: Perdiste
-  FinalTexts: []
+  - "Julio: Uy, lo siento, no sab\xEDa que\u2014"
+  - "Trillitex: \xA1AHHHHHHHHH!"
+  - "Trillitex: \xA1Qu\xE9 asco, un GUSANO! Ugh."
+  - "Trillitex: \xA1Hermana, ten cuidado! A lo mejor es\u2026 peligroso."
+  SuccessfullCombatText: Espera, por si alguien nos vio hablando contigo, toma esto.
+  BadCombatText: Hasta nunca, fracasado.
+  FinalTexts:
+  - "Trillitex: Vaya cringe, v\xE1monos de aqu\xED."

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round3
   m_EditorClassIdentifier: 
-  BossGoodAnswer: Bien
-  BossBadAnswer: Te equivocaste wey
+  BossGoodAnswer: "Trillitex: \xBF\xBF\xBFAqu\xED??? \xBF\xBF\xBFAs\xED vestido???
+    Nada que ver, este sitio es de uso \xFAnico y exclusivo de nuestra familia."
+  BossBadAnswer: "Trillitex: \xBF\xBFPerdona?? \xBFQui\xE9n te crees? As\xED vestido
+    tampoco te \xEDbamos a dejar quedarte, pap\xE1 nos matar\xEDa."
   AnswerTexts:
-  - Mala
-  - Buena
+  - "El d\xEDa que encuentre casa os vendr\xE9 con mis 20 hijos."
+  - "No, si va a estar peor la cosa aqu\xED que fuera..."
   AnswerCheck: 0001

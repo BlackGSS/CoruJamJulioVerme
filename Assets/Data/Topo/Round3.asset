@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round3
   m_EditorClassIdentifier: 
-  BossGoodAnswer: Bien
-  BossBadAnswer: Te equivocaste wey
+  BossGoodAnswer: "Manolo: Se lo agradezco, pero prefiero alquil\xE1rselo a una familia
+    m\xE1s conservadora. Disculpe."
+  BossBadAnswer: "Manolo: jaja xd fuera de aqu\xED"
   AnswerTexts:
-  - Mala
-  - Buena
+  - "Pod\xEDa hacerme el favor, que soy padre de familia\u2026"
+  - "Estoy seguro de si le mando mis n\xF3minas le convencer\xE1n."
   AnswerCheck: 0001

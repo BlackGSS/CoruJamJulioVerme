@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round1
   m_EditorClassIdentifier: 
-  BossGoodAnswer: Hola buen gusano
+  BossGoodAnswer: "Trillitex: Largo, este no es lugar para gente como t\xFA."
   BossBadAnswer: 
   AnswerTexts:
-  - Mala
-  - Buena
+  - "\xA1Arriba las manos, esto es un atraco!"
+  - "Oh\u2026 disculpad, se\xF1oritas, \xBFsois las Trillitex?"
   AnswerCheck: 0001

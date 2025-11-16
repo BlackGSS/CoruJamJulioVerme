@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7262b8dc8a5400f4493fcc5ef7544e2e, type: 3}
   m_Name: Round2
   m_EditorClassIdentifier: 
-  BossGoodAnswer: "Manolo: Ruego me disculpe, pero se lo voy a alquilar a un brit\xE1nico
-    con una renta m\xE1s alta."
-  BossBadAnswer: "Manolo: Mu\xE9streme antes usted siete n\xF3minas y p\xE1gueme
-    cuatro meses por adelantado o no hay trato."
+  BossGoodAnswer: "Manolo: Con dos islas si quisiera. \xBFLe interesa?"
+  BossBadAnswer: "Manolo: Seguro que s\xED, pero el propietario no quiere ni\xF1es.
+    Igual es mejor que mire en otro sitio."
   AnswerTexts:
   - "Caballero, soy un turista suizo con sueldo de Suiza, \xBFme alquila la vivienda?"
   - Quiero alquilar el piso, trabajo en marketing.

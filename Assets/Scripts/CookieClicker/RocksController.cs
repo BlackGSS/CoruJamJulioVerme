@@ -34,7 +34,7 @@ public class RocksController : MonoBehaviour
     protected void Start()
     {
         SetupRocks();
-        DOVirtual.DelayedCall(.5f,() => group.enabled = false);
+        DOVirtual.DelayedCall(1f,() => group.enabled = false);
     }
 
     #endregion

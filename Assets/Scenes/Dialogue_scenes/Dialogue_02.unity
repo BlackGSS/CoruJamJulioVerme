@@ -642,9 +642,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1816d7de7db3424b9b0b2711d103e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _julioImage: {fileID: 0}
+  _julioImage: {fileID: 2117789413}
   _accesoriesImagePrefab: {fileID: 1541139491610554748, guid: 4adea0dff4181174687dac701975d511, type: 3}
-  _accesoriesReferencePoint: {fileID: 0}
+  _accesoriesReferencePoint: {fileID: 928331335}
   _julioSprites: {fileID: 11400000, guid: c0471a8cdbf6ebc409381f58bfd600d1, type: 2}
   _accesories:
   - {fileID: 11400000, guid: 7e55c0a6a0e9b3f4bb7da67be0877742, type: 2}

@@ -60,4 +60,9 @@ public class SceneManagement : MonoBehaviour
 		Player.currentScene++;
 		SceneManager.LoadScene(sceneOrder[Player.currentScene]);
 	}
+
+	public void Quit()
+	{
+		Application.Quit();
+	}
 }

@@ -683,9 +683,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1816d7de7db3424b9b0b2711d103e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _julioImage: {fileID: 0}
+  _julioImage: {fileID: 506799113}
   _accesoriesImagePrefab: {fileID: 1541139491610554748, guid: 4adea0dff4181174687dac701975d511, type: 3}
-  _accesoriesReferencePoint: {fileID: 0}
+  _accesoriesReferencePoint: {fileID: 1524293546}
   _julioSprites: {fileID: 11400000, guid: c0471a8cdbf6ebc409381f58bfd600d1, type: 2}
   _accesories:
   - {fileID: 11400000, guid: 7e55c0a6a0e9b3f4bb7da67be0877742, type: 2}
@@ -791,8 +791,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6839831701628047987, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}
+      propertyPath: actionAfterFadeIn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1531559846}
+    - target: {fileID: 6839831701628047987, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}
       propertyPath: actionAfterFadeIn.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839831701628047987, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}
+      propertyPath: actionAfterFadeIn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839831701628047987, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}
+      propertyPath: actionAfterFadeIn.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneManagement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839831701628047987, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}
+      propertyPath: actionAfterFadeIn.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8f25c5832b9a6f48a292465b6106cf6, type: 3}

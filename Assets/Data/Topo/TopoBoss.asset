@@ -15,9 +15,9 @@ MonoBehaviour:
   BossName: Manolo Eltopo
   BossImage: {fileID: 21300000, guid: 54bcbad315b314cc1964239c28588d31, type: 3}
   Rounds:
-  - {fileID: 11400000, guid: bae81358381250242bc46ca56fbb8c10, type: 2}
-  - {fileID: 11400000, guid: d91ba184fb9ead84aa6d95df5c0720cd, type: 2}
-  - {fileID: 11400000, guid: 9c85d430be8a580448568aceed3209e4, type: 2}
+  - {fileID: 11400000, guid: 8acef349f49c640d49444804869b8218, type: 2}
+  - {fileID: 11400000, guid: d6c9364d7072c44018da0f329605ba3e, type: 2}
+  - {fileID: 11400000, guid: 50c926ed0f8a34cb8be6a8a462d90e14, type: 2}
   InitialText:
   - "Julio: \xA1Epaaaa! \xA1Casi chocamos!"
   - "Topo: \xA1Buenos d\xEDas! \xBFEs usted la pr\xF3xima visita?"

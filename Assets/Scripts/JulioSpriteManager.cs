@@ -41,7 +41,6 @@ public class JulioSpriteManager : MonoBehaviour
 	{
 		_julioImage.sprite = _julioSprites.combatSprite;
 
-		Player.Accesories = new List<Accesories> { Accesories.Camisa};
 		var accesoriesDictionary = _accesories.ToDictionary(x => x.accesory);
 		for (int i = 0; i < Player.Accesories.Count; i++)
 		{

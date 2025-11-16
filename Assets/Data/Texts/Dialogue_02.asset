@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Dialogue_02
   m_EditorClassIdentifier: 
   textsToLoad:
-  - "Trillitex: As\xED puede que tengas alguna oportunidad en la siguiente galer\xEDa."
-  - "Julio: \xA1Gracias! Probar\xE9 suerte."
   - "\xBFSab\xEDas que las hormigas duermen en micro-siestas? Unas 250 siestas de
     un minuto al d\xEDa."
   - "Pero Julio no ten\xEDa tiempo para eso."

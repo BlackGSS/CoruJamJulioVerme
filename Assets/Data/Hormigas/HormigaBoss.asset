@@ -24,6 +24,7 @@ MonoBehaviour:
   - "Trillitex: \xA1Qu\xE9 asco, un GUSANO! Ugh."
   - "Trillitex: \xA1Hermana, ten cuidado! A lo mejor es\u2026 peligroso."
   SuccessfullCombatText: Espera, por si alguien nos vio hablando contigo, toma esto.
-  BadCombatText: Hasta nunca, fracasado.
+  BadCombatText: "Hasta nunca, fracasado. Vaya cringe, v\xE1monos de aqu\xED."
   FinalTexts:
-  - "Trillitex: Vaya cringe, v\xE1monos de aqu\xED."
+  - "Trillitex: Puede que tengas alguna oportunidad en la siguiente galer\xEDa."
+  - "Julio: \xA1Gracias! Probar\xE9 suerte."

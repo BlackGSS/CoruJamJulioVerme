@@ -10,4 +10,7 @@ public static class Player
 {
     public static float diggingStrength = 1f;
     public static int combatRound = 0;
+    public static List<Accesories> Accesories = new();
 }
+
+public enum Accesories { Camisa, Chaleco };

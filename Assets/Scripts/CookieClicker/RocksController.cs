@@ -68,10 +68,19 @@ public class RocksController : MonoBehaviour
 
     protected void RandomizeAspect()
     {
-        foreach (var rock in rocks)
+        int[] ints = new int[rocks.Count];
+        for (int i = 0; i < rocks.Count; i++)
         {
+            ints[i] = i;
+        }
+
+        int[] shufledInts = Shuffle(ints);
+
+        for (int i = 0; i < rocks.Count; i++)
+        {
+            var rock = rocks[i];
             rock.ChangeImage(rockSprites[Random.Range(0,rockSprites.Count)]);
-            rock.SetOrder(Random.Range(1,rockSprites.Count));
+            rock.SetOrder(shufledInts[i]);
         }
     }
 
@@ -87,6 +96,28 @@ public class RocksController : MonoBehaviour
         {
             rock.OnBreakRock += BreakRock;
         }
+    }
+
+    // probably "static" should be added (depends on GenerateAnotherNum routine)
+    public int[] Shuffle(int[] Sequence)
+    {
+        // public method's arguments validation
+        if (null == Sequence)
+            throw new ArgumentNullException(nameof(Sequence));
+
+        // No need in Array if you want to modify Sequence
+
+        for (int s = 0; s < Sequence.Length - 1; s++)
+        {
+            int GenObj = Random.Range(s, Sequence.Length); // pleace, note the range
+
+            // swap procedure: note, var h to store initial Sequence[s] value
+            var h = Sequence[s];
+            Sequence[s] = Sequence[GenObj];
+            Sequence[GenObj] = h;
+        }
+
+        return Sequence;
     }
     #endregion
 }

@@ -18,6 +18,10 @@ public class ClickerController : MonoBehaviour
     protected RocksController rocksController;
     [SerializeField]
     protected List<BossScriptable> bossScriptables;
+    [SerializeField]
+    protected GameObject clickTutorial;
+    [SerializeField]
+    protected DialogueUI dialogueUI;
 
     protected int rocksNumber;
     protected int rockIndex = 1;
@@ -29,6 +33,11 @@ public class ClickerController : MonoBehaviour
         rocksNumber = rocksController.GetRocksNumber();
         SetupBossData(Player.combatRound);
         Addlisteners();
+        if (Player.combatRound != 0)
+        {
+            clickTutorial.SetActive(false);
+            dialogueUI.gameObject.SetActive(false);
+        }            
     }
 
     protected void Addlisteners()
@@ -39,6 +48,7 @@ public class ClickerController : MonoBehaviour
 
     protected void ChangeBackgroundVisibility()
     {
+        clickTutorial.SetActive(false);
         fadeAmmount -= CalculateFadeAmmount();
         CalculateFadeColor();
         background.DOColor(fadeColor, .5f);

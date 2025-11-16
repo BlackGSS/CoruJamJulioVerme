@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 	private JulioSpriteManager _julioSpriteManager;
 	[SerializeField]
 	private RewardSystem _rewardSystem;
+	[SerializeField]
+	private SceneManagement _sceneManagement;
 
 	void Start()
 	{
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
 		_dialogueUI.ShowDialogue(bossScriptable.InitialText);
 	}
 
-	public void CheckWin()
+	private void CheckWin()
 	{
 		_choiceDialogueUI.gameObject.SetActive(false);
 
@@ -65,12 +67,11 @@ public class GameManager : MonoBehaviour
 		_dialogueUI.onCompleteTexts -= InitializeCombat;
 	}
 
-	private void EndCombat()
+	public void EndCombat()
 	{
 		Player.combatRound++;
-		_dialogueUI.gameObject.SetActive(false);
 		_dialogueUI.onCompleteTexts -= EndCombat;
-		//Cargar siguiente escena incluyendo fadeout
+		_sceneManagement.NextScene();
 	}
 
 	private void EarnReward()
@@ -78,6 +79,5 @@ public class GameManager : MonoBehaviour
 		_dialogueUI.gameObject.SetActive(false);
 		_dialogueUI.onCompleteTexts -= EarnReward;
 		_rewardSystem.WinNextReward();
-		//Show reward UI
 	}
 }

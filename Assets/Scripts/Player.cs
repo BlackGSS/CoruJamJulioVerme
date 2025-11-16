@@ -13,4 +13,4 @@ public static class Player
     public static List<Accesories> Accesories = new();
 }
 
-public enum Accesories { Camisa, Chaleco };
+public enum Accesories { Camisa, Fachaleco };

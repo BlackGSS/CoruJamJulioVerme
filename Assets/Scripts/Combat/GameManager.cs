@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 	private Image _bossImage;
 	[SerializeField]
 	private JulioSpriteManager _julioSpriteManager;
+	[SerializeField]
+	private RewardSystem _rewardSystem;
 
 	void Start()
 	{
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
 	public void CheckWin()
 	{
 		_choiceDialogueUI.gameObject.SetActive(false);
+
 		List<string> finalTexts = new();
 		BossScriptable bossScriptable = _bossPerRoundScriptable.BossPerRound[Player.combatRound];
 		bool win = _statusBar.GetSliderValue > 0;
@@ -73,6 +76,8 @@ public class GameManager : MonoBehaviour
 	private void EarnReward()
 	{
 		_dialogueUI.gameObject.SetActive(false);
+		_dialogueUI.onCompleteTexts -= EarnReward;
+		_rewardSystem.WinNextReward();
 		//Show reward UI
 	}
 }
